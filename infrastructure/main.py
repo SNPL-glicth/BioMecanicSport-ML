@@ -5,7 +5,10 @@ Configura middlewares, políticas de CORS y monta los adaptadores de entrada (ro
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from infrastructure.api.routers import router as biomecanica_router
+from infrastructure.api.routers import (
+    router as biomecanica_router,
+    telemetria_router,
+)
 
 # Inicialización de la aplicación FastAPI
 app = FastAPI(
@@ -25,6 +28,7 @@ app.add_middleware(
 
 # Inclusión de adaptadores de entrada (Routers)
 app.include_router(biomecanica_router)
+app.include_router(telemetria_router)
 
 
 @app.get("/", tags=["Información General"])

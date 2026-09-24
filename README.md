@@ -58,6 +58,7 @@ BioMecanicSport-ML/
 | `GET` | `/redoc` | Documentación técnica alternativa ReDoc |
 | `POST` | `/analisis/angulo` | Cálculo cinemático de ángulo articular y evaluación de alerta lesiva |
 | `GET` | `/analisis/simulacion` | Simulación rápida de flexión articular preconfigurada |
+| `POST` | `/analyze-telemetry` | Ingesta de streaming de telemetría (MediaPipe landmarks) sin almacenamiento de video |
 
 ### Ejemplo: Cálculo de Ángulo Articular
 
